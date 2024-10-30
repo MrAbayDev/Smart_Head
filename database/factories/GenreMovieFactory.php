@@ -2,12 +2,14 @@
 
 namespace Database\Factories;
 
+use App\Models\Genre;
+use App\Models\Movie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Movie>
  */
-class MovieFactory extends Factory
+class GenreMovieFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +19,8 @@ class MovieFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->title(),
-            'is_published' => $this->faker->boolean(),
-            'poster_url' => $this->faker->imageUrl(),
+            'move_id' => Movie::factory(),
+            'genre_id' => Genre::factory(),
         ];
     }
 }

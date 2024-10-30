@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('genre__movies', function (Blueprint $table) {
+        Schema::create('genre_movie', function (Blueprint $table) { // jadval nomini to'g'rilandi
             $table->id();
             $table->foreignId('movie_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('genre_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('genre__movies');
+        Schema::dropIfExists('genre_movie');
     }
 };
