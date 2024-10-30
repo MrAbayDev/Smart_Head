@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Genre extends Model
 {
-    /** @use HasFactory<\Database\Factories\GenreFactory> */
+    /** @use HasFactory<\Database\Seeders\GenreFactory> */
     use HasFactory;
+    protected $fillable = [
+        'name',
+    ];
     public function movies(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Movie::class,'genre_movie');
+        return $this->belongsTo(Movie::class,'genre_movies');
     }
 }

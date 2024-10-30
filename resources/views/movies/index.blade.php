@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Список фильмов<</h1>
+    <h1>Список фильмов</h1>
 
     <ul>
         @foreach($movies as $movie)
@@ -17,5 +17,6 @@
         @endforeach
     </ul>
 
+    <!-- Paginatsiya linklarini ko'rsatish -->
     {{ $movies->links() }}
 @endsection

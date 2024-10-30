@@ -6,21 +6,15 @@ use App\Models\Genre;
 use App\Models\Movie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Movie>
- */
 class GenreMovieFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = \App\Models\GenreMovie::class; // O‘rta jadval modelini ko‘rsatamiz
+
     public function definition(): array
     {
         return [
-            'move_id' => Movie::factory(),
-            'genre_id' => Genre::factory(),
+            'movie_id' => Movie::factory(), // Yangi film yaratish
+            'genre_id' => Genre::factory(),  // Yangi janr yaratish
         ];
     }
 }

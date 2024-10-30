@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Genre;
-use Database\Factories\GenreFactory;
+use Database\Seeders\GenreFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 

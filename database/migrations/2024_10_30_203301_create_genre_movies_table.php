@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('genre_movie', function (Blueprint $table) { // jadval nomini to'g'rilandi
+        Schema::create('genre_movies', function (Blueprint $table) { // jadval nomini to'g'rilandi
             $table->id();
             $table->foreignId('movie_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('genre_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();

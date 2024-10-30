@@ -4,9 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\GenreController;
 use App\Http\Controllers\API\MovieController;
 
-Route::get('genres', [GenreController::class, 'index']);
-Route::get('genres/{id}', [GenreController::class, 'show']);
+Route::resource('/genres', GenreController::class);
 
-Route::get('movies', [MovieController::class, 'index']);
-Route::get('movies/{id}', [MovieController::class, 'show']);
+Route::resource('/movies', MovieController::class);
 

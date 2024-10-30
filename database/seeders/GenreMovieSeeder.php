@@ -1,21 +1,14 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Seeders;
 
-use App\Models\Genre;
+use Illuminate\Database\Seeder;
 use App\Models\GenreMovie;
-use App\Models\Movie;
-use Illuminate\Database\Eloquent\Factories\Factory;
 
-class GenreMovieFactory extends Factory
+class GenreMovieSeeder extends Seeder
 {
-    protected $model = GenreMovie::class; // O‘rta jadval modelini ko‘rsatamiz
-
-    public function definition()
+    public function run(): void
     {
-        return [
-            'movie_id' => Movie::factory(), // Yangi film yaratish
-            'genre_id' => Genre::factory(),  // Yangi janr yaratish
-        ];
+        GenreMovie::factory()->count(50)->create(); // 50 ta o‘rta jadval yozuvini yaratadi
     }
 }
